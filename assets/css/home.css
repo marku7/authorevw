@@ -1,0 +1,274 @@
+.container {
+	display: flex;
+	justify-content: center;
+	padding: 13px 5%;
+  }
+  
+  .right-sidebar {
+	flex-basis:15%;
+	position: sticky;
+	top: 70px;
+	align-self: flex-start;
+	padding: 10px;
+  }
+  
+  .sidebar-title img {
+	display: flex;
+	position: sticky;
+	border-radius: 50%;
+	align-self: flex-start;
+  }
+  
+  .name {
+	margin-top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333333;
+	text-align: center;
+  }
+  
+  
+  /* left side */
+  
+  .left-sidebar {
+	flex-basis: 20%;
+	position: sticky;
+	top: 70px;
+	align-self: flex-start;
+	padding: 15;
+  }
+  
+  
+  .left-btn,
+  .dropdown .left-btn,
+  .contents {
+	  align-items: center;
+	  justify-content: center;
+	  margin: 10px 0;
+	  padding: 10px;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	  background-color: #ccc6c6;
+	  border: none;
+	  color: black;
+	  font-size: 12px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+  }
+  
+  .left-btn:hover,
+  .dropdown .left-btn:hover,
+  .contents:hover {
+	  background-color: #bbb5b5;
+  }
+  
+  .dropdown {
+	  position: relative;
+	  display: inline-block;
+  }
+  
+  .dropdown-content {
+	  display: none;
+	  position: sticky;
+	  z-index: 1;
+  }
+  
+  .dropdown-content button {
+	  color: black;
+	  padding: 10px;
+	  text-decoration: none;
+	  display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+	  display: block;
+  }
+  
+  
+  /* center */
+  
+  .main-content{
+	  flex-basis: 90%;
+  }
+  
+  .write-post-container{
+	  width: 800px;
+	  background: white;
+	  border-radius: 8px;
+	  padding: 10px;
+	  columns: #626262;
+  
+  }
+  
+  .user-profile{
+	  display: flex;
+	  align-items:center;
+	  position: relative;
+	  margin-right: 100px;
+  }
+  
+  .user-profile img{
+	  width: 40px;
+	  height: 38px;
+	  border-radius: 50%;
+	  margin-right: 10px;
+  }
+  
+  .user-profile p{
+	  margin-bottom: -5px;
+	  font-weight: 500;
+	  color: black;
+  }
+  
+  .post-input-container{
+	  padding-left: 55px;
+	  padding-top: 1px;
+  }
+  
+  
+  .post-input-container textarea {
+	  width: 650px; 
+	  border: 0;
+	  outline: 0;
+	  border-bottom: 1px solid #ccc;
+	  background-color: transparent;
+	  border-radius: 10px;
+	  margin-bottom: 10px;
+	}
+  
+  .post-button {
+	  padding: 8px 16px;
+	  border: none;
+	  border-radius: 4px;
+	  background-color: #ccc6c6;
+	  color: black;
+	  font-size: 12px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+  }
+  
+  .post-button:hover {
+	  background-color: #175285;
+  }
+  
+  .upload-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-top: 6px;
+	margin-right: 10px;
+	cursor: pointer;
+  }
+  .image-preview-container {
+	  margin-top: 10px;
+	  position: relative;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center; 
+	}
+	
+	.input-row {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin-bottom: 10px;
+	}
+	
+	.image-preview-container img {
+	  max-width: 100%;
+	  max-height: 200px;
+	  display: none;
+	}
+  
+  .post-input-container {
+	position: relative;
+  }
+  
+  .user-profile span{
+	  font-size: 13px;
+	  color: #9a9a9a;
+  }
+  
+  .post-container{
+	  width: 800px;
+	  background: white;
+	  border-radius: 6px;
+	  padding: 20px;
+	  color: #626262;
+	  margin: 20px 0;
+	  
+  
+  }
+  
+  .post-text{
+	  color: black;
+	  margin: 15px 0;
+	  font-size: 15px;
+  }
+  
+  .post-img{
+	  width: 750px;
+	  border-radius: 4px;
+	  margin-bottom: 10px;
+  }
+  
+  .post-row{
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+  }
+  
+  .activity-icons div img{
+	  margin-right: 10px;
+  }
+  
+  .activity-icons div{
+	  display: inline-flex;
+	  align-items: center;
+	  margin-right: 30px;
+  }
+  
+  .post-profile-icon{
+	  display: flex;
+	  align-items: center;
+  }
+  
+  .post-profile-icon img{
+	  width: 30px;
+	  height: 30px;
+	  border-radius: 50%;
+	  margin-right: 5px;
+  
+  }
+  
+  
+  .post-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .report-icon {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: -70px;
+	margin-bottom: 60px;
+	
+  }
+  
+  .report-button {
+	background: none;
+	border: none;
+	position: relative;
+	padding: 0;
+	cursor: pointer; 
+  }
+  
+  .report-button img {
+	width: 30px;
+	height: 30px;
+  }
