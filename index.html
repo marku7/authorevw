@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AuthoRevw</title>
+
+  <style>
+    body {
+      background: linear-gradient(35deg, rgba(150, 150, 150), rgba(99, 43, 43) 25%, rgba(0, 63, 94) 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 100vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+    }
+
+    .description {
+      font-size: 18px;
+      color: antiquewhite;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      border-radius: 5px;
+      background-color: steelblue;
+      color: #eee;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: dodgerblue;
+      color: black;
+    }
+
+    .right-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      position: relative;
+    }
+
+    .right-section img {
+      width: 430px;
+      height: 250px;
+      border-radius: 2px;
+      border: 5px black;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 5);
+    }
+
+    .home{
+      position: relative;
+      z-index: 1;
+    }
+
+    .stories{
+        position: relative;
+        top: 10px;
+        right: -150px;
+    }
+
+    .content{
+      position: relative;
+      top: 10px;
+      left: -150px;
+      z-index: -1;
+    }
+
+    .container {
+  position: relative;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <img src="assets/images/icon.png" class="logo">
+      <div class="title">AuthoRevw</div>
+      <div class="description">
+        Your Gateway to Movies, Books, and Stories!
+      </div>
+      <div class="description">
+        Discover your next favorite movie, book, or captivating short story all in one place!<br> Say goodbye to wasting precious time searching for the perfect entertainment and let AuthoRevw be your trusted guide.<br>Join now and experience the power of shared experiences and make your entertainment choices with confidence!
+      </div>
+      <div class="buttons">
+        <a href="guest/guest.asp" class="button">Preview</a>
+        <a href="login.html" class="button">Log in</a>
+      </div>
+    </div>
+    <div class="right-section">
+      <img src="assets/images/stories.png" class="stories">
+      <img src="assets/images/home.png" class="home">
+      <img src="assets/images/contents.png" class="content">
+
+    </div>
+  </div>
+</body>
+</html>

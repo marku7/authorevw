@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AuthoRevw</title>
+    <link rel="stylesheet" href="assets/css/sign.css"/>
+  </head>
+  <body>
+    <div class="form-wrapper">
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+        <form method="post" action="reguser.asp">
+          <label class="label">Upload Avatar</label>
+          <div class="image-container">
+            <img id="preview" src="#" alt="Image Preview" class="avatar-circle"  style="width: 100px; height: 100px; border-radius: 50%; display: none;">
+          </div>
+          <input type="file" name="photo" id="photo" onchange="uploadAndProcessImage(event)"/>
+          <input type="hidden" id="base64" name="base64">
+          <label>Full Name</label>
+          <input type="text" name="complete_name" id="signupUsername" placeholder="" required/>
+          <label>Email</label>
+          <input type="email" name="email_address" placeholder="" required/>
+          <label>Password</label>
+          <input type="password" name="pword" placeholder="" required/>
+          <input type="submit" value="Save" href="index.html" width="100%"/>
+          <a href="index.html"><input type="button" value="Cancel" width="100%"></a>
+       </form>  
+     
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+    </div>
+  </div>
+    <p class="para-2">
+      Already have an account? <a href="index.html">Login here</a>
+    </p>
+
+    <script>
+      const uploadAndProcessImage = async (event) => {
+    const file = event.target.files[0];
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+    img.onload = function() {
+      cropAndCompressImage(this);
+      document.querySelector("#preview").style.display = "block";
+      document.querySelector("#preview").src = URL.createObjectURL(file);
+    }
+    console.log(file);
+  }
+  
+    
+      function cropAndCompressImage(img) {
+        const aspectRatio = img.width / img.height;
+        let cropWidth, cropHeight, cropX, cropY;
+    
+        if (aspectRatio > 1) {
+          cropWidth = img.height;
+          cropHeight = img.height;
+          cropX = (img.width - cropWidth) / 2;
+          cropY = 0;
+        } else {
+          cropWidth = img.width;
+          cropHeight = img.width;
+          cropX = 0;
+          cropY = (img.height - cropHeight) / 2;
+        }
+        
+    const canvas = document.createElement('canvas');
+          canvas.width = 800;
+          canvas.height = 800;
+    
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, cropX, cropY, cropWidth, cropHeight, 0, 0, canvas.width, canvas.height);
+    
+          const jpegURL = canvas.toDataURL('image/jpeg', 0.8);
+          document.querySelector("#base64").value = jpegURL;
+      console.log(jpegURL); // Added console log to see the base64 string
+    }
+    </script>
+
+  </body>
+</html>
